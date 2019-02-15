@@ -1,0 +1,11 @@
+2019-02-13 16:16:19.157 [main] ERROR genralized_utillity.Log4j.Log - Found issue in Android Desired Capability
+
+2019-02-13 16:16:19.166 [main] INFO  genralized_utillity.Log4j.Log - [32m**********************************       STARTED      **********************************[0m
+2019-02-13 16:16:19.166 [main] INFO  genralized_utillity.Log4j.Log - ****************************************************************************************
+2019-02-13 16:16:19.166 [main] INFO  genralized_utillity.Log4j.Log - [31m>>>>>>>>>>>>>>>>>>>>>>>>>>>          Starting test case for calculator [0m
+2019-02-13 16:16:19.166 [main] INFO  genralized_utillity.Log4j.Log - ****************************************************************************************
+
+2019-02-13 16:16:19.167 [main] INFO  genralized_utillity.Log4j.Log - selecting the digit
+
+2019-02-13 16:16:19.176 [main] ERROR genralized_utillity.Log4j.Log - Screenshot method Issue
+

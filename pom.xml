@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>Reinvent</groupId>
+    <artifactId>123</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+        <organization>
+            <name>Mobiquity</name>
+            <url>http://www.mobiquityinc.com</url>
+        </organization>
+
+
+
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.6</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>test-jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.10</version>
+                    <executions>
+                        <execution>
+                            <id>copy-dependencies</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>copy-dependencies</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>${project.build.directory}/dependency-jars/</outputDirectory>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.5.4</version>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                            <configuration>
+                                <finalName>zip-with-dependencies</finalName>
+                                <appendAssemblyId>false</appendAssemblyId>
+                                <descriptors>
+                                    <descriptor>src/main/java/calculator_utillity/assembly/zip.xml</descriptor>
+                                </descriptors>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
+        <dependencies>
+
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>3.2.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.appium</groupId>
+                <artifactId>java-client</artifactId>
+                <version>5.0.4</version>
+            </dependency>
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>6.14.3</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>2.11.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>6.14.3</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>20090211</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aventstack</groupId>
+                <artifactId>extentreports</artifactId>
+                <version>3.1.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>2.11.0</version>
+            </dependency>
+        </dependencies>
+
+    </project>
+
